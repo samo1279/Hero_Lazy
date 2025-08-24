@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <title>Hero Lazy</title>
+  <meta name="theme-color" content="#0f172a"/>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="icons/icon-192.png">
+  <style>
+    /* Minimal CSS reset */
+    *{box-sizing:border-box}html,body{margin:0;padding:0}
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="icons/icon-192.png" alt="Hero Lazy" class="logo">
+      <div>
+        <h1>Hero Lazy</h1>
+        <p class="subtitle">دو تا ستون در روز = برد!</p>
+      </div>
+    </div>
+    <div class="actions">
+      <button id="installBtn" class="btn ghost" hidden>نصب روی گوشی</button>
+      <button id="notifyBtn" class="btn">فعال‌سازی نوتیف</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="date-row">
+        <span id="today"></span>
+        <span id="progress" class="pill">0 / 4</span>
+      </div>
+      <ul class="tasks" id="taskList">
+        <!-- tasks will be injected by app.js -->
+      </ul>
+      <div class="hint">حداقل <b>دو تا</b> از اینا رو هر روز تیک بزن. بسه واسه امروز 😎</div>
+    </section>
+
+    <section class="card">
+      <h2>آرشیو هفته اخیر</h2>
+      <div id="archive" class="archive"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>ساخته‌شده برای آدم‌های راحت 🤝</span>
+    <a href="#" id="resetDay" class="link">ریست امروز</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
